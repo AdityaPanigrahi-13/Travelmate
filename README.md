@@ -1,2 +1,2 @@
 # Travelmate
-Travel iternary planner
+Builing AI Powered Travel Iternary Planner
