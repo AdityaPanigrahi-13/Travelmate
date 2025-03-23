@@ -13,53 +13,6 @@ body {
 }
 
 
-/*NAVBAR*/
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 15px 50px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-.nav-links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #e74c3c;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 20px 10px;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-    color: blue;
-}
-
-.login-btn {
-    background-color: #e74c3c;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    position: absolute;
-    right: 20px; /* Adjust distance from right */
-    top: 15px; /* Adjust distance from top */
-}
-
-.login-btn:hover {
-    background-color: blue;
-}
 
 /* HERO SECTION */
 .hero {
