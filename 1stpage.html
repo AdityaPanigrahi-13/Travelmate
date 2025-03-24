@@ -6,56 +6,75 @@
     <title>Travel Mate</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">TRAVELMATE</div>
+        <div class="logo">TravelMate</div>
         <div class="nav-links">
-            <a href="#">Home</a>
-           <a href="#">Trips</a> 
-            <a href="#">Contact</a> 
+            <button class="nav-links-btns">Login</button>
+            <button class="nav-links-btns">Home</button>
+            <button class="nav-links-btns">Trips</button>
+            <button class="nav-links-btns">Contact</button>
         </div>
-        <button class="login-btn">Login</button>
+        
     </nav>
-
+    
     <section class="hero">
-        <img src="Images/airplane.gif" alt="plane icon" width="50"> 
         <h1>PLAN, BUDGET, EXPLORE</h1>
         <p>Plan your journey with ease, track your expenses seamlessly, and discover hidden gems tailored to your preferences.</p>
-
-        <form class="search-bar">
-            <div class="fx fx-gap">
-                <div>
-                    <input type="text" placeholder="Next travel destination?" required />
-                </div>
-                <div id="search-icon">
-                    <button type="submit">
-                        <div id="search-icon-circle"></div>
-                        <span></span>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </section>
-
-<section class="featured-container">
-    <h2>Featured Destinations</h2>
-    <div class="gallery">
-        <div class="gallery-container">
-            <img class="gallery-item" src="Images/varanasi.webp" alt="Varanasi">
-            <img class="gallery-item" src="Images/kerala.webp" alt="Kerala">
-            <img class="gallery-item" src="Images/kolkata.webp" alt="Kolkata">
-            <img class="gallery-item" src="Images/odisha.webp" alt="Odisha">
-            <img class="gallery-item" src="Images/LehLadakh.webp" alt="Leh Ladakh">
-            <img class="gallery-item" src="Images/goa.webp" alt="Goa">
-            <img class="gallery-item" src="Images/andaman.webp" alt="Andaman">
-            <img class="gallery-item" src="Images/meghalaya.webp" alt="Meghalaya">
-            <img class="gallery-item" src="Images/jaipur.webp" alt="Jaipur">
+        <div><button class="plan-btn" >Let's Go <i class="fa-solid fa-rocket"></i> </button>
         </div>
+    </section>
+    
+    <div class="swiper-container">
+    <div class="swiper">
+    
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide"> 
+        <img src="Images/Goa.webp" alt="">
+      </div>
+      
+      <div class="swiper-slide"> 
+        <img src="Images/Jaipur.webp" alt="">
+      </div>
+      
+      <div class="swiper-slide"> 
+        <img src="Images/Kerala.webp" alt="">
+      </div>
+
+      <div class="swiper-slide"> 
+        <img src="Images/Kolkata.webp" alt="">
+      </div>
+
+      <div class="swiper-slide"> 
+        <img src="Images/LehLadakh.webp" alt="">
+      </div>
+
+      <div class="swiper-slide"> 
+        <img src="Images/Meghalaya.webp" alt="">
+      </div>
+
+      <div class="swiper-slide"> 
+        <img src="Images/Odisha.webp" alt="">
+      </div>
+
+      <div class="swiper-slide"> 
+        <img src="Images/Varanasi.webp" alt="">
+      </div>
+    
     </div>
-</section>
 
+    </div>
+</div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,378 +1,117 @@
 /* GENERAL STYLES */
+
+
 body {
     margin: 0;
-    font-family: 'Patrick Hand', cursive;
-    background-color: #edb3d4;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #ffcdc7;
+    width: 100%;
+    height: 100%;
 }
 .logo {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
-    color: #e74c3c;
-    top: 15px;                                      
-    left: 20px;
-}
-
-
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    color: #e74c3c;
-}
-
-.hero p {
-    font-size: 35px;
-    color: rgb(23, 22, 22);
-}
-
-/* SEARCH BAR */
-.search-bar {
-    position: relative;
-    width: 300px;
-    height: 20px;
-    margin: 40px auto;
-    background-color: #f87a7a;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 0 10px 40px #ebc2c2, 0 0 0 10px #f1e5e5eb;
-}
-
-.fx {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.fx-gap {
-    gap: 10px;
-}
-
-.search-bar input {
-    width: 100%;
-    height: 40px;
-    border: none;
-    font-size: 20px;
-    padding: 10px;
-    outline: none;
-    color: #f1d7d5;
-    background: transparent;
-}
-
-.search-bar input::placeholder {
-    color: #ed1010;
-}
-
-/* SEARCH BUTTON */
-#search-icon button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    width: 50px;
-    height: 50px;
-}
-
-#search-icon-circle {
-    width: 30px;
-    height: 30px;
-    border: 5px solid #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-}
-
-#search-icon button span {
-    position: absolute;
-    width: 20px;
-    height: 5px;
-    background: white;
-    top: 30px;
-    left: 25px;
-    transform: rotate(45deg);
-}
-
-/* SEARCH BUTTON HOVER EFFECT */
-#search-icon:hover #search-icon-circle {
-    border-color: blue;
-}
-
-#search-icon:hover button span {
-    background-color: blue;
-}
-
-/* FEATURED SECTION */
-.featured {
-    text-align: left;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 50px 0;
-    color: #e74c3c;
-    padding: 10px 5px;
-}
-
-/* GALLERY SECTION */
-
-body {
-    margin: 0;
-    font-family: 'Patrick Hand', cursive;
-    background-color: rgb(242, 196, 196); /* Removed pink background */
-}
-
-/* GENERAL STYLES */
-body {
-    margin: 0;
-    font-family: 'Patrick Hand', cursive;
-    background-color: #edb3d4;
-}
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e74c3c;
-    top: 15px;
-    left: 20px;
+    color: #000000;
+    margin: 20px;
 }
 
 
 /*NAVBAR*/
-.navbar {
+.navbar{
+    height: 55px;
+    width: 100%;
     display: flex;
+    background-color: #bfecff;
     justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 15px 50px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-.nav-links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
     gap: 20px;
+    align-items: center;
+    position: fixed;   
 }
-
-.nav-links a {
-    text-decoration: none;
-    color: #e74c3c;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 20px 10px;
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-    color: blue;
-}
-
-.login-btn {
-    background-color: #e74c3c;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
+.nav-links-btns{
+    background-color: #fff6e3;
     border: none;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    position: absolute;
-    right: 20px; /* Adjust distance from right */
-    top: 15px; /* Adjust distance from top */
+    padding: 5px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    
 }
 
-.login-btn:hover {
-    background-color: blue;
+.nav-links{
+    gap: 20px;
+    display: flex;
+    margin: 20px;
 }
 
-/* HERO SECTION */
+/* Heading Section */
+
 .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
     text-align: center;
-    padding: 100px 20px;
+    
 }
 
-.hero h1 {
-    font-size: 48px;
-    color: #e74c3c;
+.hero h1{
+    font-size: 5rem;
+    color: #232323;
+    font-weight: 700;
+    margin-bottom: 10px; 
+    
 }
 
-.hero p {
-    font-size: 35px;
-    color: rgb(23, 22, 22);
+.hero p{
+    font-size: 1.9rem;
+    width: 65%;
+    margin-top: 5px;
 }
 
-/* SEARCH BAR */
-.search-bar {
+.plan-btn{
+    background-color: #fff6e3;
+    font-size: 2.25rem;
+    border: none;
+    border-radius: 7px;
+    font-weight: 500;
+    color: #232323;
+    padding: 5px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: ease-in 0.3s;
+    margin-top: 30px;
+}
+
+.plan-btn:hover{
+    scale: 1.05;
+    rotate: -0.8deg;
+    background-color: #232323;
+    color: #fff6e3;
+}
+
+.swiper img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: block;
+}
+
+.swiper-container{
+    width: 100%;
+}
+
+.swiper{
+    width: 100%;
+    padding: 50px 0;
+
+}
+
+.swiper-slider{
     position: relative;
     width: 300px;
-    height: 20px;
-    margin: 40px auto;
-    background-color: #f87a7a;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 0 10px 40px #ebc2c2, 0 0 0 10px #f1e5e5eb;
-}
-
-.fx {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.fx-gap {
-    gap: 10px;
-}
-
-.search-bar input {
-    width: 100%;
-    height: 40px;
-    border: none;
-    font-size: 20px;
-    padding: 10px;
-    outline: none;
-    color: #f1d7d5;
-    background: transparent;
-}
-
-.search-bar input::placeholder {
-    color: #ed1010;
-}
-
-/* SEARCH BUTTON */
-#search-icon button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    width: 50px;
-    height: 50px;
-}
-
-#search-icon-circle {
-    width: 30px;
-    height: 30px;
-    border: 5px solid #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-}
-
-#search-icon button span {
-    position: absolute;
-    width: 20px;
-    height: 5px;
-    background: white;
-    top: 30px;
-    left: 25px;
-    transform: rotate(45deg);
-}
-
-/* SEARCH BUTTON HOVER EFFECT */
-#search-icon:hover #search-icon-circle {
-    border-color: blue;
-}
-
-#search-icon:hover button span {
-    background-color: blue;
-}
-
-/* FEATURED SECTION */
-.featured {
-    text-align: left;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 50px 0;
-    color: #e74c3c;
-    padding: 10px 5px;
-}
-
-/* GALLERY SECTION */
-
-body {
-    margin: 0;
-    font-family: 'Patrick Hand', cursive;
-    background-color: rgb(242, 196, 196); /* Removed pink background */
-}
-
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    background: transparent;
-    overflow: hidden;
-    height: 400px;
-}
-
-.gallery-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    max-width: 1100px;
-    position: relative;
-    flex-wrap: nowrap; /* Ensures images stay in a row */
-}
-
-.gallery-item {
-    width: 220px;
-    height: 320px;
-    object-fit: cover;
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-    position: relative;
-    border-radius: 5px;
-    margin: 0 -30px; /* ⬅ Reduced spacing for better overlap */
-    z-index: 1;
-}
-
-/* Farthest side images - smallest */
-.gallery-item:nth-child(1),
-.gallery-item:nth-child(9) {
-    transform: scale(0.65);
-    opacity: 0.5;
-    z-index: 1;
-}
-
-.gallery-item:nth-child(2),
-.gallery-item:nth-child(8) {
-    transform: scale(0.75);
-    opacity: 0.5;
-    z-index: 2;
-}
-
-.gallery-item:nth-child(3),
-.gallery-item:nth-child(7) {
-    transform: scale(0.85);
-    opacity: 0.7;
-    z-index: 3;
-}
-
-/* Middle-side images - slightly larger */
-.gallery-item:nth-child(4),
-.gallery-item:nth-child(6) {
-    transform: scale(0.95);
-    opacity: 0.7;
-    z-index: 4;
-}
-
-/* Center image (Leh Ladakh) - biggest */
-.gallery-item:nth-child(5) {
-    transform: scale(1.2);
-    opacity: 1;
-    z-index: 5;
-}
-
-/* Hover effect for smooth interaction */
-.gallery-item:hover {
-    transform: scale(1.3);
-    z-index: 6;
-    opacity: 1;
+    aspect-ratio: 3/4;
+    border-radius: 12p;
 }
