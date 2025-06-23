@@ -1,0 +1,191 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Inter",sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fed4d0;
+    background-position: center;
+}
+
+.login{
+    width: 400px;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.login .text{
+    font-weight: bold;
+    font-size: larger;
+    font-family: "Poppins",sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #e74c3c;
+
+}
+.login p {
+    text-align: center; /* Centers the text horizontally */
+    margin-top: 8px; 
+    margin-bottom: 5px;
+    font-size: 19px; /* Adjust font size as needed */
+    font-family: "Poppins", sans-serif; /* Match your overall style */
+    color: #333; /* Darker color for better readability */
+}
+
+
+.login .logo{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.login h2{
+    font-family: "Open-sans",sans-serif;
+    font-size: 18px;
+}
+
+.login .logo i{
+    font-size: 30px;
+}
+
+.input_box span{
+    font-size: 17px;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_box .ICON{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column; /* Arrange inputs vertically */
+    align-items: center; /* Center the inputs horizontally */
+    justify-content: center;
+}
+
+.input_box .ICON i{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-right: 2px solid #ccc;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.input_box .ICON input {
+    padding: 8px;
+    padding-left: 40px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    background: transparent;
+}
+
+.login .remember_me {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the checkbox and label horizontally */
+    margin-top: 10px;
+    gap: 8px; /* Adds space between the checkbox and label */
+    padding-left: 20px; /* Adjust this value to shift it more to the center */
+}
+
+.login .remember_me label {
+    font-size: large;
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+
+.login .forgot_password a:hover{
+    text-decoration:underline;
+}
+
+.login button {
+    width: 70%; /* Reduced from 100% to 80% */
+    padding: 6px; /* Reduced padding for a smaller look */
+    margin-top: 15px;
+    margin-bottom: 15px auto;
+    margin: 15px auto;
+    display: block;
+    border-radius: 8px; /* Slightly smaller corners */
+    outline: none;
+    border: none;
+    background-color: #f8a096;
+    font-size: 18px; /* Reduced font size */
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover Effect */
+.login button:hover {
+    background-color: #e74c3c;
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+    transform: scale(1.05);
+}
+
+
+/* login butto hover effect baki hai */
+
+.login .signin{
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+    /* font family */
+}
+
+.login .social_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+
+}
+.login .social_icon a{
+    background-color:#f8a096;
+    border-radius: 50%;
+    padding: 5px;
+    color: black;
+    margin-bottom: 10px;
+    box-shadow: #ccc;
+    align-items: center;
+
+}
+
+.login .signup{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+
+.login .signup  a{
+    text-decoration: none;
+    color: #e74c3c;
+    font-size: 20px;
+
+}

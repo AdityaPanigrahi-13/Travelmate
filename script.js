@@ -1,36 +1,56 @@
+
+let sidebar = document.querySelector(".sidebar")
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 30,
+    slidesPerView : 'auto',
+    breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween:2,
+          speed:2500,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    spaceBetween: 5,
     loop: true,
     autoplay: {
-        delay: 4000, // Slower transition
+        delay: 0, // Slower transition
         disableOnInteraction: false, // Keeps autoplay running even after interaction
     },
-    speed: 1200, // Slower transition speed for smoother effect
+    speed: 3500, // Slower transition speed for smoother effect
     effect: "slide", // Keeps it smooth
     grabCursor: true, // Makes it feel more interactive
 });
 
-// Mouse movement effect
-document.querySelector(".mySwiper").addEventListener("mousemove", function (event) {
-    let swiperContainer = this.getBoundingClientRect();
-    let mouseX = event.clientX - swiperContainer.left;
 
-    if (mouseX > swiperContainer.width / 2) {
-        swiper.slideNext(); // Move to next slide if hovered on the right side
-    } else {
-        swiper.slidePrev(); // Move to previous slide if hovered on the left side
-    }
-});
 
 
 // FUNCTION FOR LOGIN
 
-function goToLogin() {
-    window.location.href = "login.html";
+
+function showSlidebar(){
+    console.log("clicked");
+    
+    if(sidebar.style.display === "none" || sidebar.style.display === ""){
+        sidebar.style.display = "block"; 
+    }
+   
+}
+
+function hideSlidebar() {
+    console.log("button is clicked");
+    console.log(sidebar)
+    console.log(sidebar.style);
+    
+    if(sidebar.style.display === "block" || sidebar.style.display === "" )
+    {
+        sidebar.style.display = "none"
+    }
 }
 
 
-function goToSignUp() {
+
+function goToLogin() {
     window.location.href = "signup.html";
 }
