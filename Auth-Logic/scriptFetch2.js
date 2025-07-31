@@ -31,10 +31,14 @@ document.addEventListener("DOMContentLoaded",()=>{
         }
         )
         if (response.ok) {
-            goToDashboard();
+            // goToDashboard();
+            const data = await response.json();
+            const token = data.token;
+            console.log(token);
+            localStorage.setItem('authToken',token)
             loginform.reset();
           } else {
-            alert("Signup failed");
+            alert("Signin failed");
           }
         console.log(response);
         

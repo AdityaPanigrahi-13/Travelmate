@@ -5,6 +5,26 @@ body {
   padding: 0;
   font-family: Outfit, Montserrat;
   background-color: #fce9de;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;  
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: white;
+  background-image: 
+    linear-gradient(to right, rgba(71, 85, 105, 0.15) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(71, 85, 105, 0.15) 1px, transparent 1px),
+    radial-gradient(circle at 50% 60%, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.05) 40%, transparent 70%);
+  background-size: 
+    40px 40px, 
+    40px 40px, 
+    100% 100%;
+  pointer-events: none;
 }
 
 .sidebar{
@@ -12,8 +32,9 @@ body {
   top: 0;
   height: 40vh;
   width: 100%;
-  background-color: #bfecff;
-  box-shadow: -10px 0 10px rgba(0,0,0,0.3);
+  background-color: #ffffff;
+  background-image: radial-gradient(circle at 50% 60%, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.05) 40%, transparent 70%);
+  box-shadow: #232323;
   display: flex;
   flex-direction: column;
   align-items: center ;
@@ -44,7 +65,7 @@ body {
 
 
 .s-logo {
-  font-size: 40px;
+  font-size: 24px;
   font-weight: bold;
   color: #232323;
   margin-left: 20px;
@@ -66,11 +87,16 @@ body {
   max-width: 1520px;
   height: 55px;
   display: flex;
-  background-color: #f1c5c4;
+  background-color: #ffffff;
+  background-image: radial-gradient(circle at 50% 60%, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.05) 40%, transparent 70%);
+  box-shadow: #232323;
   justify-content: space-between;
   gap: 20px;
   align-items: center;
-  
+  position: fixed;
+  /* position: relative; */
+  z-index: 3;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: 100%;
   margin: 0 auto;
   border-bottom: 1px solid #fce9de;
@@ -122,6 +148,7 @@ body {
     font-weight: 700;
     line-height: 1;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .hero p{
@@ -130,11 +157,13 @@ body {
     margin: 0 auto;
     line-height: 1.2;
     margin-bottom: 50px;
+    position: relative;
     
 }
 
 .plan-btn{
     background-color: #fff6e3;
+    position: relative;
     height: 50px;
     width: 250px;
     font-size: 35px;
@@ -151,9 +180,9 @@ body {
 
 .plan-btn:hover{
     scale: 1.05;
-    rotate: -0.8deg;
-    background-color: #6C63FF;
-    color: #C7F9FF;
+    rotate: -0.4deg;
+    background-color: #ffffff;
+    background-image: radial-gradient(circle at 50% 60%, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.05) 40%, transparent 70%);
 }
 
 
@@ -232,6 +261,7 @@ body {
     display: flex;
     border-radius: 20px;
     padding: 10px 20px;
+    position: relative;
   }
 
   .left-part{

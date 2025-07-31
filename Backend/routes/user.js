@@ -62,7 +62,7 @@ userRouter.post("/signup", async(req, res) => {
             const token = jwt.sign({
                 username
             },JWT_USER_PASSWORD)
-            console.log(token);
+            console.log(token); 
 
             
             res.json({
@@ -75,6 +75,7 @@ userRouter.post("/signup", async(req, res) => {
                 message : "Invalid Credntials or User does not exist!"
             })
     }
+
 }); 
 
 module.exports = {

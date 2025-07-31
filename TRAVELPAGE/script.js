@@ -1,5 +1,7 @@
 
 let sidebar = document.querySelector(".sidebar")
+let navbar = document.querySelector(".navbar")
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView : 'auto',
     breakpoints: {
@@ -34,6 +36,8 @@ function showSlidebar(){
     
     if(sidebar.style.display === "none" || sidebar.style.display === ""){
         sidebar.style.display = "block"; 
+        navbar.style.display = "none"
+        
     }
    
 }
@@ -46,19 +50,24 @@ function hideSlidebar() {
     if(sidebar.style.display === "block" || sidebar.style.display === "" )
     {
         sidebar.style.display = "none"
+         navbar.style.display = ""
     }
 }
 
 
 
 function goToLogin() {
-    window.location.href = "SIGNUP&LOGIN/signupnew.html";
+    console.log("btn is clicked");
+    
+    window.location.href = "SIGNUP&LOGIN/signup.html";
 }
 
 function goToform2(){
-    window.location.href="TRAVELPAGE/form2.html";
+    console.log("Hello");
+    
+    window.location.href="form2.html";
 }
 
 function goToTrips(){
-    window.locaction.href="TRIPS/optionmenu.html";
+    window.location.href="TRIPS/optionmenu.html";
 }

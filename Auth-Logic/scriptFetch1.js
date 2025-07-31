@@ -1,6 +1,6 @@
 
 function goToLogin() {
-    window.location.href = "login.html";
+    window.location.href = "SIGNUP&LOGIN/login.html";
 }
 
 
