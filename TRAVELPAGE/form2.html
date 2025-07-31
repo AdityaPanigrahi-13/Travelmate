@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Mate Preferences</title>
+  <link rel="stylesheet" href="style5.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Plan your journey with Travel Mate</h1>
+    <p class="subtext">Let us know your travel details and we'll create the perfect itinerary just for you.</p>
+
+    <!-- Departing from and Heading to side by side -->
+    <div class="form-group location-row">
+      <div class="input-group">
+        <label class="label-from">Departing from?</label>
+        <input type="text" id="departing-input" placeholder="Enter departing city..." autocomplete="off" />
+      </div>
+
+      <div class="arrow-icon">
+        <i class='bx bx-chevrons-right bx-fade-right'></i>
+      </div>
+
+      <div class="input-group">
+        <label class="label-to">Heading to?</label>
+        <input type="text" id="heading-input" placeholder="Enter destination..." autocomplete="off" />
+      </div>
+    </div>
+
+    <!-- Travel date -->
+    <div class="input-group">
+      <label class="label-date">Select your travel date:</label>
+      <input type="date" id="travel-date" name="travel-date" min="">
+    </div>
+
+
+    <!-- Travel days -->
+    <div class="form-group">
+      <label class="label-days">How many days do you want to explore?</label>
+      <div class="day-selector">
+        <button onclick="decreaseDays()">-</button>
+        <span id="day-count">3</span>
+        <button onclick="increaseDays()">+</button>
+      </div>
+    </div>
+
+    <!-- No of travellers -->
+    <div class="form-group">
+      <label class="label-days">How many people are traveling?</label>
+      <div class="travellers-selector">
+        <button onclick="decreaseTravellers()">-</button>
+        <span id="travellers-count">1</span>
+        <button onclick="increaseTravellers()">+</button>
+      </div>
+    </div>
+
+    <!-- Budget -->
+    <div class="form-group">
+      <label class="label-budget">Select your preferred budget range per person</label>
+      <p class="budget-subtext">This helps us plan activities and food options accordingly.</p>
+      <div class="budget-options">
+        <div class="budget-card" onclick="selectbudget(this)">Low<br /><small>₹0 - ₹5,000</small></div>
+        <div class="budget-card" onclick="selectbudget(this)">Medium<br /><small>₹5,000 - ₹15,000</small></div>
+        <div class="budget-card" onclick="selectbudget(this)">High<br /><small>₹15,000+</small></div>
+      </div>
+    </div>
+
+    <!-- Trip Type -->
+    <div class="form-group">
+      <label class="label-trip-type">What kind of trip are you planning?</label>
+      <p class="trip-subtext">Select one.</p>
+      <div class="trip-options">
+        <div class="trip-card" onclick="selectTrip(this)">Solo Trip🚶</div>
+        <div class="trip-card" onclick="selectTrip(this)">Partner Trip💑</div>
+        <div class="trip-card" onclick="selectTrip(this)">Friends Trip</div>
+        <div class="trip-card" onclick="selectTrip(this)">Family Trip👨‍👨‍👦‍👦</div>
+      </div>
+
+      <!-- Intrested in -->
+      <div class="form-group">
+        <label class="label-intrest">Tell us what you are intrested in ?</label>
+        <div class="intrest-options">
+          <div class="choice-card" onclick="selectintrest(this)"><i class="material-icons">local_dining</i>Local Cuisine
+          </div>
+          <div class="choice-card" onclick="selectintrest(this)"><i class="material-icons">attractions</i>Must see attractions</div>
+          <div class="choice-card" onclick="selectintrest(this)"><i class="material-icons">local_see</i>Sightseeing</div>
+          <div class="choice-card" onclick="selectintrest(this)">Family and Relaxation</div>
+          <div class="choice-card" onclick="selectintrest(this)"><i class="material-icons">holiday_village</i>Malls and Architectures</div>
+          <div class="choice-card" onclick="selectintrest(this)"><i class="material-icons">temple_hindu</i>Religious</div>
+          <div class="choice-card" onclick="selectintrest(this)"><i class="material-icons">shopping_bag</i>Shopping Markets</div>
+          <div class="choice-card" onclick="selectintrest(this)"><i class="material-icons">hiking</i>Adventure and Outdoors</div>
+          <div class="choice-card" onclick="selectintrest(this)">Historic Places</div>
+          <div class="choice-card" onclick="selectintrest(this)">Leisure and Lifestyle</div>
+        </div>
+
+        <div class="submit-section">
+          <button type="submit" class="submit-btn"><i class="material-icons">send</i>Create My Itinerary</button>
+        </div>
+
+      </div>
+
+      <script>
+        // Day counter
+        let dayCount = 3;
+        const dayDisplay = document.getElementById("day-count");
+        function increaseDays() {
+          dayCount++;
+          dayDisplay.textContent = dayCount;
+        }
+        function decreaseDays() {
+          if (dayCount > 1) {
+            dayCount--;
+            dayDisplay.textContent = dayCount;
+          }
+        }
+
+        // Traveller counter
+        let travellerCount = 1;
+        const travellerDisplay = document.getElementById("travellers-count");
+        function increaseTravellers() {
+          travellerCount++;
+          travellerDisplay.textContent = travellerCount;
+        }
+        function decreaseTravellers() {
+          if (travellerCount > 1) {
+            travellerCount--;
+            travellerDisplay.textContent = travellerCount;
+          }
+        }
+
+        // Trip type selection
+        function selectTrip(element) {
+          document.querySelectorAll('.trip-card').forEach(card => card.classList.remove('selected'));
+          element.classList.add('selected');
+        }
+        function selectbudget(element) {
+          document.querySelectorAll('.budget-card').forEach(card => card.classList.remove('selected'));
+          element.classList.add('selected');
+        }
+        function selectintrest(element) {
+          element.classList.toggle('selected');
+        }
+
+        const dateInput = document.getElementById('travel-date');
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);  // Add 1 day
+
+        // Format as yyyy-mm-dd
+        const yyyy = tomorrow.getFullYear();
+        const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+        const dd = String(tomorrow.getDate()).padStart(2, '0');
+        const minDate = `${yyyy}-${mm}-${dd}`;
+
+        dateInput.min = minDate;
+
+      </script>
+</body>
+
+</html>
