@@ -54,3 +54,7 @@ function hideSlidebar() {
 function goToLogin() {
     window.location.href = "signup.html";
 }
+
+function goToform2(){
+    window.location.href="TRAVELPAGE/fomr2.html"
+}
