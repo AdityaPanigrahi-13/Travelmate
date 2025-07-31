@@ -303,7 +303,7 @@ body::before {
     align-items: center;
   }
 
-  .right-part svg{
+  .right-part img{
     height: 50px;
     width: 50px;
     object-fit: cover;
