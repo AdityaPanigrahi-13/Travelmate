@@ -56,5 +56,5 @@ function goToLogin() {
 }
 
 function goToform2(){
-    window.location.href="TRAVELPAGE/fomr2.html";
+    window.location.href="TRAVELPAGE/form2.html";
 }
