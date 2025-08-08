@@ -1,6 +1,10 @@
-
 let sidebar = document.querySelector(".sidebar")
+const bagbtn = document.getElementById("bag-btn");
+const bagPopup = document.getElementById("bag-popup");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("close-popup");
 let navbar = document.querySelector(".navbar")
+let toggleBagList = false
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView : 'auto',
@@ -71,3 +75,19 @@ function goToform2(){
 function goToTrips(){
     window.location.href="TRIPS/optionmenu.html";
 }
+
+
+bagbtn.addEventListener("click", () => {
+    bagPopup.classList.add("active");
+    overlay.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+    bagPopup.classList.remove("active");
+    overlay.classList.remove("active");
+});
+
+overlay.addEventListener("click", () => {
+    bagPopup.classList.remove("active");
+    overlay.classList.remove("active");
+});
